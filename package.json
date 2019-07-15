@@ -1,0 +1,16 @@
+{
+  "name": "everlive-devops-frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mttaggart/everlive-devops-frontend",
+  "author": "mttaggart <michael.t.taggart@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel build src/index.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}

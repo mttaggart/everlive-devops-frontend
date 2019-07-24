@@ -7,7 +7,7 @@ const TIE = "TIE";
 
 const beats = {
     "rock": "scissors",
-    "paper": "paper",
+    "paper": "scissors",
     "scissors": "paper"
 }
 

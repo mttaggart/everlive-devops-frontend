@@ -1,17 +1,13 @@
 import React from "react";
 import App from "../Components/App";
-import renderer from "react-test-renderer";
+import RPSScoreboard from "../Components/RPS/RPSScoreboard";
+import Adapter from 'enzyme-adapter-react-16';
+import { shallow, configure } from 'enzyme';
 
-test("score changes on click", () => {
-    const component = renderer.create(
-        <App />
-    );
-    let tree = component.toJSON();
-    let scoreboard = tree.children[0];
-    let message = tree.children[1];
-    let gameboard = tree.children[1];
+configure({ adapter: new Adapter() });
 
-    console.log(gameboard);
-    expect(tree).toMatchSnapshot();
-
-})
+test("App Renders RPSScoreboard", () => {
+    const app = shallow(<App />);
+    const children = app.children();
+    expect(children.find(RPSScoreboard)).toHaveLength(1);
+});

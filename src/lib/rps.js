@@ -22,8 +22,12 @@ const evaluate = (playerChoice, computerChoice) => {
     }
 }
 
+const getComputerChoice = () => 
+    [ROCK, PAPER, SCISSORS][Math.floor(Math.random() * 3)];
+
 export default {
     evaluate,
+    getComputerChoice,
     ROCK,
     PAPER,
     SCISSORS,

@@ -18,11 +18,7 @@ class App extends React.Component {
     }
 
     choose(playerChoice) {
-        const computerChoice = [
-            RPS.ROCK,
-            RPS.PAPER,
-            RPS.SCISSORS
-        ][Math.floor(Math.random() * 3)];
+        const computerChoice = RPS.getComputerChoice();
         const result = RPS.evaluate(playerChoice, computerChoice);
 
         if (result === RPS.WIN) {
